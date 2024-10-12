@@ -1,6 +1,7 @@
 package com.workintech.s17d2;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.workintech.s17d2.enums.Experience;
 import com.workintech.s17d2.model.*;
 import com.workintech.s17d2.rest.DeveloperController;
 import com.workintech.s17d2.tax.DeveloperTax;
@@ -173,7 +174,7 @@ class MainTest {
         //management.endpoints.web.exposure.include
         String managementEndpointsWebExposureInclude = env.getProperty("management.endpoints.web.exposure.include");
         assertNotNull(managementEndpointsWebExposureInclude);
-        assertThat(managementEndpointsWebExposureInclude).isEqualTo("info,health,mappings");
+        assertThat(managementEndpointsWebExposureInclude).isEqualTo("info, health, mappings");
 
 
         String infoAppName= env.getProperty("info.app.name");
